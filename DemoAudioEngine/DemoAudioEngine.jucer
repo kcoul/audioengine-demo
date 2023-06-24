@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="FGHqSi" name="DemoAudioEngine" projectType="dll" jucerVersion="5.4.3"
-              companyName="Acme Inc." bundleIdentifier="com.acme.DemoAudioEngine">
+<JUCERPROJECT id="FGHqSi" name="DemoAudioEngine" projectType="dll" companyName="Acme Inc."
+              bundleIdentifier="com.acme.DemoAudioEngine" jucerFormatVersion="1">
   <MAINGROUP id="rsHQ8Z" name="DemoAudioEngine">
     <GROUP id="{08F550BD-C8BB-3100-441A-58903A2F048F}" name="Source">
       <FILE id="e0rlkS" name="AndroidBindings.cpp" compile="1" resource="0"
@@ -19,7 +19,7 @@
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
-    <XCODE_IPHONE targetFolder="Builds/iOS">
+    <XCODE_IPHONE targetFolder="Builds/iOS" iosDevelopmentTeamID="NQ2VLM7NM7">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" customXcodeFlags="DYLIB_INSTALL_NAME_BASE = &quot;@rpath&quot;, LD_DYLIB_INSTALL_NAME = &quot;$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)&quot;"/>
         <CONFIGURATION isDebug="0" name="Release" customXcodeFlags="DYLIB_INSTALL_NAME_BASE = &quot;@rpath&quot;, LD_DYLIB_INSTALL_NAME = &quot;$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)&quot;"/>
@@ -102,18 +102,18 @@
     </XCODE_MAC>
   </EXPORTFORMATS>
   <MODULES>
-    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
   </MODULES>
   <LIVE_SETTINGS>
     <LINUX/>

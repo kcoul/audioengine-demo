@@ -395,7 +395,7 @@ struct DemoAudioEngine::Pimpl   : private AudioIODeviceCallback, private TimeSli
             playbackFinishedCallback();
     }
 
-    void audioDeviceIOCallback(const float** /*inputs*/, int /*inChannels*/, float** outputs, int outChannels, int n) override
+    void audioDeviceIOCallbackWithContext(const float* const* /*inputs*/, int /*inChannels*/, float* const* outputs, int outChannels, int n) override
     {
         jassert(outChannels == 2);
 

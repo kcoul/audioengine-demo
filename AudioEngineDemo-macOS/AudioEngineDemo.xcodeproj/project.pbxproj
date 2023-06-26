@@ -48,7 +48,6 @@
 		EA011298219B161C003AD55F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA011299219B161C003AD55F /* AudioEngineDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioEngineDemo.entitlements; sourceTree = "<group>"; };
 		EA92099A219E2FD30086F190 /* DemoAudioEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DemoAudioEngine.xcodeproj; path = ../DemoAudioEngine/Builds/MacOSX/DemoAudioEngine.xcodeproj; sourceTree = "<group>"; };
-		EA9209A4219E37880086F190 /* AudioEngineDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioEngineDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +88,6 @@
 				EA011295219B161C003AD55F /* Main.storyboard */,
 				EA011298219B161C003AD55F /* Info.plist */,
 				EA011299219B161C003AD55F /* AudioEngineDemo.entitlements */,
-				EA9209A4219E37880086F190 /* AudioEngineDemo-Bridging-Header.h */,
 			);
 			path = AudioEngineDemo;
 			sourceTree = "<group>";

@@ -47,7 +47,9 @@
 {
     CGSize size = viewToAttachTo.bounds.size;
     audioEngine.setWaveformComponentSize(size.width, size.height);
-    audioEngine.addWaveformComponentToNativeParentView (viewToAttachTo);
+    //TODO: Which of the two lines below is correct for this situation?
+    //audioEngine.addWaveformComponentToNativeParentView ((__bridge void*)viewToAttachTo);
+    audioEngine.addWaveformComponentToNativeParentView ((void*)CFBridgingRetain(viewToAttachTo));
 }
 
 - (void) removeWaveformComponentFromView                                // 2

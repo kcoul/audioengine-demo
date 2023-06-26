@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46BE89562A49F0CE00F36CBA /* ObjectiveCBindings.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46BE89552A49F0CE00F36CBA /* ObjectiveCBindings.mm */; };
 		EA0112AC219B7848003AD55F /* The VERONA Break edit.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA0112AA219B7848003AD55F /* The VERONA Break edit.wav */; };
 		EA0112B4219C4F8C003AD55F /* DemoAudioEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0112B3219C4F57003AD55F /* DemoAudioEngine.dylib */; };
 		EA0112B6219C4FBE003AD55F /* DemoAudioEngine.dylib in Copy Dynamic Library */ = {isa = PBXBuildFile; fileRef = EA0112B3219C4F57003AD55F /* DemoAudioEngine.dylib */; };
@@ -45,8 +44,6 @@
 
 /* Begin PBXFileReference section */
 		46BE89412A49ECD700F36CBA /* AudioEngineDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioEngineDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		46BE89432A49ED6200F36CBA /* ObjectiveCBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectiveCBindings.h; path = ../DemoAudioEngine/Source/ObjectiveCBindings.h; sourceTree = "<group>"; };
-		46BE89552A49F0CE00F36CBA /* ObjectiveCBindings.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = ObjectiveCBindings.mm; path = ../DemoAudioEngine/Source/ObjectiveCBindings.mm; sourceTree = "<group>"; };
 		EA0112AA219B7848003AD55F /* The VERONA Break edit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "The VERONA Break edit.wav"; sourceTree = "<group>"; };
 		EA0112AE219C4F56003AD55F /* DemoAudioEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DemoAudioEngine.xcodeproj; path = ../DemoAudioEngine/Builds/iOS/DemoAudioEngine.xcodeproj; sourceTree = "<group>"; };
 		EA9192D421944A6E0016382E /* Chhhhaah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Chhhhaah.wav; sourceTree = "<group>"; };
@@ -100,9 +97,7 @@
 		EAA01DF62191DDE000AA8344 = {
 			isa = PBXGroup;
 			children = (
-				46BE89552A49F0CE00F36CBA /* ObjectiveCBindings.mm */,
 				46BE89412A49ECD700F36CBA /* AudioEngineDemo-Bridging-Header.h */,
-				46BE89432A49ED6200F36CBA /* ObjectiveCBindings.h */,
 				EAA01E012191DDE000AA8344 /* AudioEngineDemo */,
 				EAA01E002191DDE000AA8344 /* Products */,
 				EA9192D321944A190016382E /* Resources */,
@@ -231,7 +226,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46BE89562A49F0CE00F36CBA /* ObjectiveCBindings.mm in Sources */,
 				EAA01E052191DDE000AA8344 /* ViewController.swift in Sources */,
 				EAA01E032191DDE000AA8344 /* AppDelegate.swift in Sources */,
 			);

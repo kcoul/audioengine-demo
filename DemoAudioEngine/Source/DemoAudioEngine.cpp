@@ -302,9 +302,12 @@ struct DemoAudioEngine::Pimpl   : private AudioIODeviceCallback, private TimeSli
         }
         else
         {
-            std::unique_ptr<InputStream> urlStream(fileToLoad.createInputStream(false));
+            juce::URL::ParameterHandling handling = juce::URL::ParameterHandling::inAddress;
+            juce::URL::InputStreamOptions options(handling);
+            std::unique_ptr<InputStream> urlStream(fileToLoad.createInputStream(options));
+            //std::unique_ptr<InputStream> urlStream(fileToLoad.createInputStream(false));
             if (urlStream != nullptr)
-                reader.reset(fm.createReaderFor(urlStream.release()));
+                reader.reset(fm.createReaderFor(std::move(urlStream)));
         }
 
         if (reader != nullptr)
@@ -395,27 +398,32 @@ struct DemoAudioEngine::Pimpl   : private AudioIODeviceCallback, private TimeSli
             playbackFinishedCallback();
     }
 
-    void audioDeviceIOCallbackWithContext(const float* const* /*inputs*/, int /*inChannels*/, float* const* outputs, int outChannels, int n) override
+    void audioDeviceIOCallbackWithContext (const float* const* inputChannelData,
+                                           int numInputChannels,
+                                           float* const* outputChannelData,
+                                           int numOutputChannels,
+                                           int numSamples,
+                                           const AudioIODeviceCallbackContext& context) override
     {
-        jassert(outChannels == 2);
+        jassert(numOutputChannels == 2);
 
         scratchBuffer.clear();
 
         //AudioSampleBuffer inputAudio(scratchBuffer.getArrayOfWritePointers(), 2, n);
-        AudioSampleBuffer outputAudio(outputs, 2, n);
+        AudioSampleBuffer outputAudio(outputChannelData, 2, numSamples);
 
         transportSource.getNextAudioBlock(AudioSourceChannelInfo(outputAudio));
         reverb.setParameters(reverbParams);
 
-        reverb.processStereo(outputs[0], outputs[1], n);
+        reverb.processStereo(outputChannelData[0], outputChannelData[1], numSamples);
 
         auto* lowpassParams = currentLowpassCoefficients.exchange(nullptr);
         *lowpass.state = *lowpassParams;
         currentLowpassCoefficients.store(lowpassParams);
 
         dsp::AudioBlock<float> outBlock(outputAudio);
-        dsp::ProcessContextReplacing<float> context(outBlock);
-        lowpass.process(context);
+        dsp::ProcessContextReplacing<float> contextReplacing(outBlock);
+        lowpass.process(contextReplacing);
 
         if (transportSource.hasStreamFinished())
             triggerAsyncUpdate();

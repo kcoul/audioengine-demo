@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46BE89562A49F0CE00F36CBA /* ObjectiveCBindings.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46BE89552A49F0CE00F36CBA /* ObjectiveCBindings.mm */; };
 		EA0112AC219B7848003AD55F /* The VERONA Break edit.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA0112AA219B7848003AD55F /* The VERONA Break edit.wav */; };
 		EA0112B4219C4F8C003AD55F /* DemoAudioEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0112B3219C4F57003AD55F /* DemoAudioEngine.dylib */; };
 		EA0112B6219C4FBE003AD55F /* DemoAudioEngine.dylib in Copy Dynamic Library */ = {isa = PBXBuildFile; fileRef = EA0112B3219C4F57003AD55F /* DemoAudioEngine.dylib */; };
@@ -43,9 +44,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		46BE89412A49ECD700F36CBA /* AudioEngineDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioEngineDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		46BE89432A49ED6200F36CBA /* ObjectiveCBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectiveCBindings.h; path = ../DemoAudioEngine/Source/ObjectiveCBindings.h; sourceTree = "<group>"; };
+		46BE89552A49F0CE00F36CBA /* ObjectiveCBindings.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = ObjectiveCBindings.mm; path = ../DemoAudioEngine/Source/ObjectiveCBindings.mm; sourceTree = "<group>"; };
 		EA0112AA219B7848003AD55F /* The VERONA Break edit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "The VERONA Break edit.wav"; sourceTree = "<group>"; };
 		EA0112AE219C4F56003AD55F /* DemoAudioEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DemoAudioEngine.xcodeproj; path = ../DemoAudioEngine/Builds/iOS/DemoAudioEngine.xcodeproj; sourceTree = "<group>"; };
-		EA0112D2219DDC91003AD55F /* AudioEngineDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioEngineDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		EA9192D421944A6E0016382E /* Chhhhaah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Chhhhaah.wav; sourceTree = "<group>"; };
 		EA9192D621944C6A0016382E /* AudioEngineDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioEngineDemo.entitlements; sourceTree = "<group>"; };
 		EAA01DFF2191DDE000AA8344 /* AudioEngineDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioEngineDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +100,9 @@
 		EAA01DF62191DDE000AA8344 = {
 			isa = PBXGroup;
 			children = (
+				46BE89552A49F0CE00F36CBA /* ObjectiveCBindings.mm */,
+				46BE89412A49ECD700F36CBA /* AudioEngineDemo-Bridging-Header.h */,
+				46BE89432A49ED6200F36CBA /* ObjectiveCBindings.h */,
 				EAA01E012191DDE000AA8344 /* AudioEngineDemo */,
 				EAA01E002191DDE000AA8344 /* Products */,
 				EA9192D321944A190016382E /* Resources */,
@@ -122,7 +128,6 @@
 				EAA01E092191DDE200AA8344 /* Assets.xcassets */,
 				EAA01E0B2191DDE200AA8344 /* LaunchScreen.storyboard */,
 				EAA01E0E2191DDE200AA8344 /* Info.plist */,
-				EA0112D2219DDC91003AD55F /* AudioEngineDemo-Bridging-Header.h */,
 			);
 			path = AudioEngineDemo;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BE89562A49F0CE00F36CBA /* ObjectiveCBindings.mm in Sources */,
 				EAA01E052191DDE000AA8344 /* ViewController.swift in Sources */,
 				EAA01E032191DDE000AA8344 /* AppDelegate.swift in Sources */,
 			);
@@ -259,7 +265,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -310,6 +316,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -320,7 +327,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -364,6 +371,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -376,8 +384,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AudioEngineDemo/AudioEngineDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9XT2X2HYD7;
-				HEADER_SEARCH_PATHS = ../DemoAudioEngine/Source;
+				DEVELOPMENT_TEAM = NQ2VLM7NM7;
+				HEADER_SEARCH_PATHS = (
+					../DemoAudioEngine/Source,
+					../../JUCE/modules,
+					../DemoAudioEngine/JuceLibraryCode,
+				);
 				INFOPLIST_FILE = AudioEngineDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -386,8 +398,9 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.AudioEngineDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AudioEngineDemo/AudioEngineDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioEngineDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
@@ -401,8 +414,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AudioEngineDemo/AudioEngineDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9XT2X2HYD7;
-				HEADER_SEARCH_PATHS = ../DemoAudioEngine/Source;
+				DEVELOPMENT_TEAM = NQ2VLM7NM7;
+				HEADER_SEARCH_PATHS = (
+					../DemoAudioEngine/Source,
+					../../JUCE/modules,
+					../DemoAudioEngine/JuceLibraryCode,
+				);
 				INFOPLIST_FILE = AudioEngineDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -411,7 +428,8 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.AudioEngineDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AudioEngineDemo/AudioEngineDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioEngineDemo-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
